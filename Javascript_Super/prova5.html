@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova5</title>
+</head>
+<body>
+    <script>
+
+        let tarefas = []
+        
+        while(true){
+            let opcao = prompt(`====== Gerenciador De Tarefas =========
+            1 - Para adicionar Tarefa
+            2 - Para Listar Tarefa
+            3 - Para Atualizar Tarefa
+            4 - Para Deletar Tarefa
+            5 - Para Sair            
+            `)
+            if (opcao == "1" ){
+                alert(tarefas)
+                let nome = prompt("Digite o nome da tarefa que deseja adicionar")
+                tarefas.push(nome)
+                
+                alert(tarefas)
+
+            }
+            
+            else if (opcao == "2" ){
+                alert(tarefas)
+                
+
+            }
+            else if (opcao == "3" )
+            {
+                let nome = prompt("Digite o nome que voce deseja atualizar")
+                for (let i = 0;i< tarefas.length ;i++){
+                    if  (nome == tarefas[i]){
+                        tarefas[i] = prompt("Digite o novo nome da tarefa")
+                        
+                    }
+                }
+                
+            }
+            else if (opcao == "4" ){
+                alert(tarefas)
+                nome = prompt("Digite o nome da tarefa que voce deseja deletar")
+                if(tarefas.indexOf(nome)){
+                    let posicao_tarefa = tarefas.indexOf(nome)
+                    tarefas.pop(posicao_tarefa)
+                    alert("Tarefa excluida com sucesso")
+                }else{
+                    alert("Tarefa não encontrada")
+
+                }
+
+            }
+            
+            else if (opcao == "5" ){
+                alert("Finalizando")
+                break
+            }
+            else{
+                alert("Por favor digite um valor valido")}
+
+
+        }
+
+    </script>
+    
+</body>
+</html>
