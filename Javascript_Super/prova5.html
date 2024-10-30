@@ -19,7 +19,7 @@
             5 - Para Sair            
             `)
             if (opcao == "1" ){
-                alert(tarefas)
+            
                 let nome = prompt("Digite o nome da tarefa que deseja adicionar")
                 tarefas.push(nome)
                 
@@ -34,13 +34,16 @@
             }
             else if (opcao == "3" )
             {
-                let nome = prompt("Digite o nome que voce deseja atualizar")
-                for (let i = 0;i< tarefas.length ;i++){
-                    if  (nome == tarefas[i]){
-                        tarefas[i] = prompt("Digite o novo nome da tarefa")
-                        
-                    }
+                nome = prompt("Digite o nome da tarefa que voce deseja atualizar")
+                if(tarefas.indexOf(nome)){
+                    let posicao_tarefa = tarefas.indexOf(nome)
+                    tarefas[posicao_tarefa] = prompt("Digite um novo nome da tarefa")
+                    alert("Tarefa Atualizada com sucesso")
+                }else{
+                    alert("Tarefa não encontrada")
+
                 }
+
                 
             }
             else if (opcao == "4" ){
